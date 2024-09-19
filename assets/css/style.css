@@ -1,0 +1,75 @@
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    padding: 80px 0;
+}
+
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#about, #research, #contact {
+    background-color: #f8f9fa;
+}
+
+/* Styling the buttons */
+a.btn {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 40px 0;
+}
+
+/* Research section styling */
+.research-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.research-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.research-conference {
+    font-style: italic;
+    color: #555;
+}
+
+.research-authors {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.research-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin-top: 30px;
+}
