@@ -1,0 +1,110 @@
+
+
+.timeline {
+    position: relative;
+    border-left: 2px solid transparent; /* Keep original border, but make it transparent */
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0 auto;
+    padding-left: 50px;
+    list-style: none;
+    width: 75%;
+    left: 13%;
+}
+
+/* Pseudo-element for controlling the border line */
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: -2px; /* Align the border exactly with the original one */
+    top: 10px; /* Adjust to control the starting point */
+    bottom: 45px; /* Adjust to control the ending point */
+    width: 2px;
+    background: #8e8e8e; /* Use the original border color */
+}
+
+
+@media (max-width: 767px) {
+    .timeline {
+        max-width: 98%;
+        padding-right: 25px;
+        padding-left: 25px;
+        left: 0%;
+        width: 100%;
+    }
+
+    .timeline:before {
+        top: 10px;
+        left: -3px;
+    }
+}
+
+.timeline .event {
+    border-bottom: 1px dashed #ced1d6;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.timeline .event p{
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    font-style: italic;
+}
+
+.timeline .event h4{
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+}
+
+@media (max-width: 767px) {
+    .timeline .event {
+        padding-top: 30px;
+    }
+}
+
+.timeline .event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.timeline .event:before {
+    left: -207px;
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event:before {
+        left: 0px;
+        text-align: left;
+    }
+}
+
+.timeline .event:after {
+
+    left: -55.8px;
+    background: #6b6666;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    content: "";
+    top: 5px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event:after {
+        left: -31.8px;
+    }
+}
