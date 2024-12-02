@@ -1,10 +1,30 @@
+/* Root Variables */
+:root {
+    --background-color: #F2F0EA; /* Cream */
+    --navbar-color: #A8D5E3; /* Teal */
+    --link-color: #C05746; /* Rust Red */
+    --button-primary-color: #C05746; /* Rust Red */
+    --button-secondary-color: #225E68; /* Deep Teal */
+    --hover-link-color: #E76D54; /* Orange Hue */
+    --hover-button-primary: #E76D54; /* Darker Coral */
+    --card-background-color: #FFFFFF; /* Light gray background color */
+    --card-border-color: #ccc; /* Thin border */
+    --text-color: #000; /* Black */
+    --footer-background-color: rgba(0, 0, 0, 0.7); /* Footer background */
+    --footer-link-hover-color: #E76D54; /* Footer link hover color */
+}
+
+/* Global Styles */
 html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
 }
 
 body {
-    font-family: 'Garamond', serif; /* Set Garamond as the font for body text */
+    background-color: var(--background-color);
+    font-family: "PT Serif", serif; /* Set PT Serif as the font for body text */
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
     font-size: 1.5rem;
     margin: 0;
     padding: 0;
@@ -12,46 +32,40 @@ body {
     -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
 }
 
-/* Adjust font size for smaller devices */
+/* Link Styles */
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--hover-link-color);
+    /* transition: color 0.5s ease; */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--button-primary-color) !important;
+    border-color: var(--button-primary-color) !important;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: var(--hover-button-primary) !important;
+    border-color: var(--hover-button-primary) !important;
+}
+
+/* Responsive Font Size */
 @media (max-width: 767.98px) {
     body {
         font-size: 1.2rem; /* Smaller font size for phones */
     }
 }
 
-
-/* Background Layer */
-.bg {
-    background: url('../img/bg2-lg.jpeg') no-repeat center center;
-    background-size: cover; /* Ensure the background image covers the entire area */
-    position: fixed; /* Fixes the background in place */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    z-index: -1; /* Pushes the background behind everything else */
-}
-
-/* Content Layer */
-.content {
-    position: relative; /* Ensure the content stays above the background */
-    padding: 2rem; /* Add some padding to keep content away from the edges */
-    z-index: 1; /* Ensure it's above the background */
-    padding: 0;
-    margin: 0;
-}
-
-
-
-/* Apply Garamond to headings */
-h1, h2, h3 {
-    font-family: 'Garamond', serif; 
-}
+/* Section Padding */
 section {
     padding: 80px 0;
 }
 
-/* Override Bootstrap's container styles for larger screens */
+/* Container Width Adjustments */
 @media (min-width: 1200px) { /* XL screens */
     .container {
         max-width: 1200px; /* Adjust as needed */
@@ -65,77 +79,46 @@ section {
 }
 
 /* Home Section Specific Styles */
-#home {
-    color: #fff;
+#aboutme {
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: flex-start; /* Align content to the top */
+    justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 10%; /* Adjust the padding as needed */
+    padding-top: 60px;
 }
 
-@media (max-width: 991.98px) { /* For medium and smaller screens */
-    #home {
-        padding-top: 20%;
-        min-height: auto; /* Let the content determine height on smaller screens */
-        padding-bottom: 40px; /* Add some padding at the bottom */
-    }
-}
-
-/* About, Research, and Contact Sections without flexbox */
-#about {
-    background-color: rgba(255, 255, 255, 0.2); /*Optional overlay for readability*/
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); /* For Safari compatibility */
-    padding: 50px 0; /* Space inside sections */
+/* Other Sections */
+#publications, #talks {
+    scroll-margin-top: 70px;
+    padding: 20px 0; /* Space inside sections */
     min-height: 100vh;
-    /* display: flex; */
-}
-
- #research {
-    background-color: rgba(0, 0, 0, 0.1); /* Optional overlay for readability */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); /* For Safari compatibility */
-    padding: 50px 0; /* Space inside sections */
-    /* height: 100vh; */
-    /* display: flex; */
 }
 
 #contact {
-    background-color: rgba(255, 255, 255, 0.2); /* Optional overlay for readability */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); For Safari compatibility
-    padding: 50px 0; /* Space inside sections */
-    /* height: 100vh; */
-    /* display: flex; */
+    scroll-margin-top: 70px;
+    padding: 20px 0; /* Space inside sections */
 }
 
+/* Event Styles */
+.events {
+    padding-left: 10pt;
+}
 
+.event-list {
+    padding-top: 10pt;
+    padding-bottom: 20pt;
+}
 
+/* Card Styles */
 .card {
-    background-color: rgb(243, 243, 243); /* Less transparent for better visibility */
-    border: none;
+    background-color: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
     border-radius: 0.5rem;
-    /* backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); For Safari compatibility */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding-left: 20px;
     position: relative; /* Ensure positioning context */
-    /* z-index: 1; Adjust as necessary */
 }
-.talks .card {
-    background-color: rgba(243, 230, 230, 0.7);
-}
-
-/* Margin for large screens and above */
-/* @media (min-width: 992px) {
-    .card {
-        margin: 10rem;
-    }
-} */
-
 
 .card-body {
     padding: 1.5rem;
@@ -144,36 +127,36 @@ section {
 .card-title {
     font-family: "Raleway", serif;
     font-size: 1.4rem;
-    /* font-weight: bold; */
     line-height: 1.5rem;
     font-weight: 500;
 }
 
-.card-title a{
+.card-title a {
     padding-left: 10px;
+    color: var(--link-color) !important;
 }
 
-.card-text-coauthors {
+.card-title a:hover {
+    color: var(--hover-link-color) !important;
+}
+
+.card-text-coauthors, .card-text-summary, .card-text-venue {
     margin-bottom: 0rem;
     font-size: 1.3rem;
-    /* padding-left: 20px; */
 }
 
 .card-text-summary {
-    margin-bottom: 0rem;
-    font-size: 1.3rem;
     display: flex;
     flex-direction: column; /* Stack content vertically */
     justify-content: space-between; /* Space between text and link */
 }
 
 .card-text-venue {
-    margin-bottom: 0rem;
-    font-size: 1.3rem;
     font-style: italic;
     padding-left: 0px;
 }
 
+/* Responsive Card Text */
 @media (max-width: 767.98px) {
     .card-title {
         font-size: 1.3rem; /* Smaller font size for phones */
@@ -184,96 +167,39 @@ section {
     }
 }
 
-/* More text - initially collapsed */
-.more-text {
-    max-height: 0; /* Initially hide the extra text */
-    overflow: hidden; /* Hide overflow */
-    transition: max-height 0.5s ease, margin-top 0.5s ease, margin-bottom 0.5s ease; /* Smooth transition */
+/* Navbar Styles */
+.navbar-custom {
+    background-color: var(--navbar-color);
 }
 
-.more-text.open {
-    max-height: 200px; /* Set a max height when expanded (adjust as needed) */
-    margin-bottom: 20px; /* Add space when open */
-}
-
-
-/* Read more link */
-.read-more {
-    align-self: flex-end; /* Aligns the link to the right */
-    text-decoration: underline; /* Optional styling */
-    cursor: pointer; /* Show pointer on hover */
-    transition: color 0.5s ease; /* Smooth color transition */
-}
-
-
-
-
-
-
-/* Ensure the sticky title remains fixed after reaching the top */
-.sticky-title {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 90px; /* Sticks the title to the top of the viewport */
-    padding-top: 0px; /* Optional padding */
-    font-weight: bold;
-    z-index: 50; /* Ensure it's above the rest of the content */
-}
-
-.sticky-title h1{
-    font-size: 2.8rem; /* Make the title bigger */
-}
-
-/* Adjustments for larger screens */
-@media (min-width: 1200px) {
-    .sticky-title h1{
-        font-size: 3.5rem; /* Make the title bigger */
-    }
-}
-
-
-
-
-
-/* Navbar styling */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow to the bottom */
+    box-shadow: 0 2px 4px rgb(175, 175, 175); /* Slight shadow to the bottom */
     z-index: 1030; /* Ensure this is above other content */
 }
 
-/* Brand styling */
 .navbar-brand {
-    font-size: 1.5rem; /* Slightly larger font size for the brand */
+    font-size: 2rem; /* Slightly larger font size for the brand */
+    font-family: 'PT Serif', serif;
 }
 
-/* Navbar items spacing */
 .navbar-nav .nav-item {
     margin-left: 1rem; /* Adds space between nav items */
 }
 
-/* Navbar links font size */
 .navbar-nav .nav-link {
     font-size: 1.3rem; /* Slightly larger font size for nav links */
 }
 
-/* Active nav item styling */
-.navbar-nav .nav-link.active {
-    color: #007bff; /* Color for the active link */
-    /*font-weight: bold;  Optional: Makes the active link bold */
-}
-
-
 /* Navbar Collapse Styles */
 .navbar-collapse {
     position: fixed; /* Makes the dropdown overlay the content */
-    top: 56px; /* Adjust based on your navbar height */
+    top: 74px; /* Adjust based on your navbar height */
     left: 0;
     width: 100%;
-    background-color: #f8f9fa; /* Semi-transparent background */
+    background-color: var(--navbar-color);
     z-index: 1050; /* Higher than the content */
     overflow-y: auto; /* Allows scrolling if content overflows */
 }
-
 
 /* Ensure that desktop view remains unaffected */
 @media (min-width: 992px) {
@@ -283,23 +209,25 @@ section {
     }
 }
 
-
+/* Profile Picture Styles */
 .profile-pic {
     display: block;
     margin: 0 auto;
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
+    width: 70%;
+    height: 70%;
+    border-radius: 20%;
     object-fit: cover;
     margin-bottom: 40px; /* Space between image and icons */
-    /* Removed margin-top to prevent unnecessary gap */
+    margin-top: 50px; /* Ensures some distance from the top on larger screens */
+    border: 2px solid var(--card-border-color); /* Thin border around the picture */
 }
 
+/* Responsive Profile Picture */
 @media (max-width: 767.98px) { /* Small devices */
     .profile-pic {
         width: 60%;
         height: auto;
-        margin-top: 20px; /* Reduced margin to minimize top gap on mobile */
+        margin-top: 80px; /* Extra margin to ensure it stays visible */
     }
 }
 
@@ -307,17 +235,37 @@ section {
     .profile-pic {
         width: 45%;
         height: auto;
-        margin-top: 20px; /* Reduce top margin for medium screens */
+        margin-top: 70px; /* Adjust for medium devices */
     }
 }
 
+/* Paper Title Styles */
+.paper-title {
+    font-weight: bold;
+}
+
+/* Author Links */
+.authors a {
+    text-decoration: none;
+}
+
+/* Paper Links */
+.paper-links a {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.paper-links i {
+    margin-right: 5px;
+}
+
+/* Network Icons */
 .network-icons {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px; /* Space between the image and the icons */
 }
 
 .network-icons li {
@@ -325,23 +273,17 @@ section {
 }
 
 .network-icons a {
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .network-icons a:hover {
-    color: #007bff;
+    color: var(--hover-link-color);
 }
 
-.big-icon {
-    font-size: 3.5rem;
-}
-
-
-
-
+/* Article Container */
 .article-container {
     display: flex;
     justify-content: center; /* Center horizontally */
@@ -349,15 +291,15 @@ section {
     height: 100%;            /* Full height for vertical centering */
 }
 
+/* Article Style */
 .article-style {
     overflow: hidden; /* Prevents overflow issues */
-    /* padding: 15px;    Small padding on all sides */
+    padding: 15px;    /* Small padding on all sides */
     font-family: 'Garamond', serif; /* Good font for readability */
     line-height: 1.6; /* Improves readability */
-    color: #000; /* Text color set to black */
+    color: var(--text-color); /* Text color set to black */
     text-align: left;
 }
-
 
 /* Adjust network icon size for mobile */
 @media (max-width: 767.98px) {
@@ -378,23 +320,28 @@ section {
     text-align: center; /* Center the text inside the button */
 }
 
-
+/* Footer Styles */
 footer {
-    padding-top: 2rem;
-    padding-bottom: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px); /* For Safari compatibility */
-    color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    background-color: var(--footer-background-color);
     text-align: center;
+    color: white;
 }
 
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--footer-link-hover-color); /* Hover link color */
+}
+
+/* Scroll to Top Link */
 .scroll-to-top {
-    color: #fff;
     text-decoration: underline;
-    font-weight: bold;
 }
 
 .scroll-to-top:hover {
-    color: #ffcc00;
+    color: var(--footer-link-hover-color);
 }
