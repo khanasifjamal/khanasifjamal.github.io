@@ -1,46 +1,51 @@
+<!--
+    Template created by Vishwa Prakash HV.
+    This template is free to use and share.
+    Please keep the credits and the GitHub link to the template to help others.
+    GitHub link: https://severus-tux.github.io/template-cmi/
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- You won't need to edit anything inside <head> -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Asif Khan</title>
+    <title>Frodo Baggins</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&display=swap" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/timeline.css" rel="stylesheet">
 </head>
+
 <body>
-
-    <!-- Background section -->
-    <div class="bg"></div>
-
-    <!-- Main content section -->
-    <div class="content">
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <!-- Navbar, this is the top navigation bar -->
+    <nav class="navbar navbar-custom navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Asif Khan</a>
+            <!-- Replace 'Frodo Baggins' with your name -->
+            <a class="navbar-brand" href="#">Frodo Baggins</a> 
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         
-           
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <!-- These are the navigation links, you can change the text inside the <a> tags -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#home" >Home</a>
+                        <a class="nav-link" href="#aboutme" >About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about" >About</a>
+                        <a class="nav-link" href="#publications" >Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#research" >Research</a>
+                        <a class="nav-link" href="#talks" >Talks & Teaching</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact" >Contact</a>
@@ -50,119 +55,80 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home">
+    <!-- About Me Section -->
+    <section id="aboutme">
         <div class="container">
             <div class="modal-body row">
-                <div>
+                <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
                     <div id="profile">
-                        <img class="profile-pic" src="assets/img/asif.jpg" alt="Asif Khan">
+                        <!-- Replace 'assets/img/profile_pic.jpeg' with the path to your profile picture -->
+                        <img class="profile-pic" src="assets/img/profile_pic.jpeg" alt="Frodo Baggins">
+                        
+                        <!-- The following are social and academic icons, replace the links (in href="") with yours -->
                         <ul class="network-icons" aria-hidden="true">
                             <li>
-                                <a href="https://scholar.google.co.in/citations?hl=en&user=vmah_YkAAAAJ" target="_blank" rel="noopener" aria-label="google-scholar">
-                                    <i class="ai ai-google-scholar big-icon"></i>
+                                <a href="https://scholar.google.com/citations?user=userid" target="_blank" rel="noopener" aria-label="google-scholar">
+                                    <i class="ai ai-google-scholar" style="font-size: 34px;"></i>
                                 </a>
                             </li>
                             
                             <li>
-                                <a href="https://dblp.org/pid/12/4907-9.html" target="_blank" rel="noopener" aria-label="dblp">
-                                    <i class="ai ai-dblp big-icon"></i>
+                                <a href="https://dblp.org/pid/userid" target="_blank" rel="noopener" aria-label="dblp">
+                                    <i class="ai ai-dblp" style="font-size: 34px;"></i>
                                 </a>
                             </li>
                             
                             <li>
-                                <a href="https://www.researchgate.net/profile/Asif-Khan-121" target="_blank" rel="noopener" aria-label="researchgate">
-                                    <i class="ai ai-researchgate big-icon"></i>
+                                <a href="https://www.researchgate.net/profile/userid" target="_blank" rel="noopener" aria-label="researchgate">
+                                    <i class="ai ai-researchgate" style="font-size: 34px;"></i>
                                 </a>
                             </li>
                             
+                            <!-- If you don't have a Public identifier on Arxiv, please create one using the following link -->
+                            <!-- https://info.arxiv.org/help/author_identifiers.html -->
                             <li>
-                                <a href="https://www.linkedin.com/in/asif-khan-239516104/" target="_blank" rel="noopener" aria-label="linkedin">
-                                    <i class="fab fa-linkedin-in big-icon"></i>
+                                <a href="https://arxiv.org/a/userid" target="_blank" rel="noopener" aria-label="arxiv">
+                                    <i class="ai ai-arxiv" style="font-size: 34px;"></i>
                                 </a>
                             </li>
-                            
+
                             <li>
-                                <a href="https://twitter.com/khanasifjamal" target="_blank" rel="noopener" aria-label="twitter">
-                                    <i class="fab fa-twitter big-icon"></i>
+                                <a href="https://bsky.app/profile/userid" target="_blank" rel="noopener" aria-label="bluesky">
+                                    <i class="fa-brands fa-bluesky" style="font-size: 28px;"></i>
                                 </a>
                             </li>
-                        </ul>
-                                          
+                        </ul>                   
                     </div>
                 </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                    <!-- Write something about yourself here -->
+                    <div class="article-container">
+                        <div class="article-style">
+                            <!-- Replace the text inside <p> tags with your own information -->
+                            <p>Hello! I'm Frodo Baggins. I'm a 3rd PhD student in Computer Science at <a href="https://www.cmi.ac.in">Chennai Mathematical Institute</a>. I'm working under the supervision of <a href="https://www.cmi.ac.in/~yourguide/">Prof. Thorin Oakenshield.</a> </p>
+                            
+                            <p>I am broadly interested in Complexity Theory and Sublinear Algorithms I like working on anything that involves polynomials and second eigenvalue.</p>
+                    
+                            <p>Before this, I did my masters from Hogwarts, and my bachelors in information technology from the Durmstrang Institute, North Europe.</p>
+
+                            <!-- Replace 'assets/files/cv.pdf' with the path to your CV -->
+                            <a class="btn btn-primary btn-page-header mt-4 mb-4 btn-lg" href="assets/files/cv.pdf" target="_blank" rel="noopener">
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div> 
             </div>         
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="modal-body row">
-                <div class="col-sm-12 col-md-12 col-lg-5 col-xl-6 col-xxl-6">
-                    <h2>About Me</h2>
-                    <div class="article-container">
-                        <div class="article-style mb-5">   
-                            <p>I am a research scholar in the Computer Science Group at <a href="https://www.cmi.ac.in"> Chennai Mathematical Institute (CMI)</a>, working with Professor <a href="https://www.cmi.ac.in/~sdatta">Samir Datta</a>. I am broadly interested in theoretical aspects of computer science.
-                            </p>
-                            
-                            <p>Currently, focus of my research has been in the areas of dynamic descriptive complexity, dynamic graph algorithms, exact exponential algorithms and algorithmic group theory. </p>
-                    
-                            <a class="btn btn-outline-primary btn-page-header mt-4 btn-lg" href="/files/cv.pdf" target="_blank" rel="noopener">DOWNLOAD CV</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6 col-xxl-6">
-                    <div class="container">
-                        <h2>Education</h2>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <!-- <h6 class="card-title">Education</h6> -->
-                                        <div id="content">
-                                            <ul class="timeline">
-                                                <li class="event" data-date="2020 - Present">
-                                                    <h4>PhD in Computer Science</h4>
-                                                    <p>Chennai Mathematical Institute</p>
-                                                </li>
-                                                <li class="event" data-date="2018 - 2020">
-                                                    <h4>MSc in Computer Science</h4>
-                                                    <p>Chennai Mathematical Institute</p>
-                                                </li>
-                                                <li class="event" data-date="2013 - 2017">
-                                                    <h4>B.Tech in Computer Science</h4>
-                                                    <p>Aligarh Muslim University</p>
-                                                </li>
-                                                <li class="event" data-date="2010 - 2012">
-                                                    <h4>Intermediate</h4>
-                                                    <p>Dakshana Foundation, JNV, Hyderabad</p>
-                                                </li>
-                                                <li class="event" data-date="2010 - 2012">
-                                                    <h4>High School</h4>
-                                                    <p>JNV, Maharajganj</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                      
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-
-    <!-- Research Section -->
-    <section id="research">
+    <!-- Publications Section -->
+    <section id="publications">
         <div class="container">
             <div class="modal-body row">
                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="sticky-title">
+                    <div>
                         <h1>Publications</h1>
                     </div>
                 </div>
@@ -171,182 +137,147 @@
                     <!-- Research Card 1 -->
                     <div class="card my-3 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Revisiting Tree Canonization using polynomials. <a href="https://arxiv.org/pdf/2408.10338" class="link-primary"><i class="fa-solid fa-file-pdf"></i></a>
-                            </h5>
-                            <p class="card-text-coauthors">with V. Arvind, Samir Datta and Salman Faris.</p>
-                            <p class="card-text-venue">  SIAM Symposium on Simplicity in Algorithms (<span style="font-weight: bold;"> SOSA</span>), 2025</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Research Card 1 -->
-                    <div class="card my-3 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">The Parallel Dynamic Complexity of the Abelian Cayley Group Membership Problem. 
-                                <a href="https://arxiv.org/pdf/2308.10073" class="link-primary"><i class="fa-solid fa-file-pdf"></i></a>
+                            <!-- Replace the title and link with your publication details -->
+                            <h5 class="card-title">My First Paper on Complexity Theory using colorful polynomials. 
+                                <a href="https://arxiv.org/pdf/id.pdf" class="link-primary"><i class="fa-solid fa-file-pdf"></i></a>
                             </h5>
                             <p class="card-text-coauthors">with 
-                                <a href="https://www.imsc.res.in/~arvind/" target="_blank" rel="noopener" class="link-secondary">V. Arvind</a>, 
-                                <a href="https://www.cmi.ac.in/~sdatta/" target="_blank" rel="noopener" class="link-secondary">Samir Datta</a>, 
-                                <a href="https://example.com/shivdutt" target="_blank" rel="noopener" class="link-secondary">Shivdutt Sharma</a>, 
-                                <a href="https://example.com/yadu" target="_blank" rel="noopener" class="link-secondary">Yadu Vasudev</a>, and 
-                                <a href="https://example.com/shankar" target="_blank" rel="noopener" class="link-secondary">Shankar Ram Vasudevan</a>.
+                                <a href="https://www.cmi.ac.in/~someone/" target="_blank" rel="noopener" class="link-secondary">Thorin Oakenshield</a>
                             </p>
-                            <p class="card-text-venue"> Foundations of Software Technology and Theoretical Computer Science (<span style="font-weight: bold;">FSTTCS</span>), 2024</p>
-                        </div>
-                    </div>
-                    <!-- Research Card 1 -->
-                    <div class="card my-3 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Query maintenance under batch changes with small-depth circuits.  
-                                <a href="https://arxiv.org/pdf/2407.20031" class="link-primary"><i class="fa-solid fa-file-pdf"></i></a>
-                            </h5>
-                            <p class="card-text-coauthors">with Samir Datta, Anish Mukherjee, Felix Tschirbs, Nils Vortmeier and Thomas Zeume</p>
-                            <p class="card-text-venue">  Mathematical Foundations of Computer Science (<span style="font-weight: bold;"> MFCS</span>), 2024</p>
+                            <p class="card-text-venue"> The 23rd International Conference on second eigenvalue (<span style="font-weight: bold;">ICSEV</span>), 2024</p>
                         </div>
                     </div>
 
-                    <!-- Research Card 1 -->
+                    <!-- Research Card 2 -->
                     <div class="card my-3 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">Dynamic Planar Embedding is in DynFO. <a href="https://arxiv.org/abs/2307.09473" class="link-primary"><i class="fa-solid fa-file-pdf"></i></a>
+                            <!-- Replace the title and link with your publication details -->
+                            <h5 class="card-title">My Second Paper on SMT Solvers. 
+                                <a href="#" class="link-primary"><i class="fa-solid fa-file-pdf"></i></a>
                             </h5>
-                            <p class="card-text-coauthors">with Samir Datta and Anish Mukherjee</p>
-                            <p class="card-text-venue">  Mathematical Foundations of Computer Science (<span style="font-weight: bold;"> MFCS</span>), 2023</p>
+                            <p class="card-text-coauthors">with 
+                                <a href="#" target="_blank" rel="noopener" class="link-secondary">Author One</a>,
+                                <a href="#" target="_blank" rel="noopener" class="link-secondary">Author Two</a> and
+                                <a href="#" target="_blank" rel="noopener" class="link-secondary">Author Three</a>
+                            </p>
+                            <p class="card-text-venue"> Dummy Conference (<span style="font-weight: bold;">DC</span>), 2023</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
 
-
-
-
-        <div class="container mt-5">
+        <!-- Preprints -->
+        <div class="container">
             <div class="modal-body row">
                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
-                    <div class="sticky-title">
-                        <h1>Talks</h1>
+                    <div>
+                        <h1>Preprints</h1>
                     </div>
                 </div>
 
-                <div class="talks col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
-                     
-                    <!-- Talk Card 1 -->
+                <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
+                    <!-- Research Card 1 -->
                     <div class="card my-3 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">An Edge for an Edge, makes your Graph Go Empty. <a href="https://www.youtube.com/watch?v=your-video-id"> <i class="fab fa-youtube"></i></a> <a href="https://arxiv.org/pdf/2301.00001.pdf" class="link-primary"><i class="fa-solid fa-file-powerpoint"></i></a> </h5>
-                            <p class="card-text-venue">@ Dartmouth, USA; IMSc, Chennai; IIT Madras, India.</p>
-                            
-                            <!-- Short description -->
-                            <p class="card-text-summary">
-                                Talk about deleting edges, while updating the memory, all in parallel. But till when? Can you even maintain it?
-                                <span class="more-text"> In this talk, I explain our new techniques of maintaining the planarity of a graph in DynFO. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolore quam quia aliquid laborum doloremque debitis a voluptatem suscipit esse, corporis, voluptate corrupti temporibus at dolor explicabo deserunt ipsum commodi?</span>
-                                <a href="#" class="read-more">Read more</a>
+                            <!-- Replace the title and link with your preprint details -->
+                            <h5 class="card-title">The One Ring and Its Influence on Middle-Earth 
+                                <a href="#" class="link-primary"><i class="fa-solid fa-file-pdf"></i></a>
+                            </h5>
+                            <p class="card-text-coauthors">with 
+                                <a href="#" target="_blank" rel="noopener" class="link-secondary">Gandalf the Grey</a>,
+                                <a href="#" target="_blank" rel="noopener" class="link-secondary">Aragorn</a> and 
+                                <a href="#" target="_blank" rel="noopener" class="link-secondary">Legolas</a>
                             </p>
                         </div>
                     </div>
 
-
-                    <!-- Talk Card 2 -->
+                    <!-- Research Card 2 -->
                     <div class="card my-3 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">To Embed or not to Embed? <a href="https://www.youtube.com/watch?v=your-video-id"> <i class="fab fa-youtube"></i></a> <a href="https://arxiv.org/pdf/2301.00001.pdf" class="link-primary"><i class="fa-solid fa-file-powerpoint"></i></a> </h5>
-                            <p class="card-text-venue">@ MIT, USA; IMSc, Chennai; IIT Madras, India.</p>
-                            
-                            <!-- Short description -->
-                            <p class="card-text-summary">
-                                I explain our recent paper of Embededing in DynFO. The crucial question is to decide when to really embedd. Or when to update the memory. <span class="more-text"> In this talk, I explain our new techniques of maintaining the planarity of a graph in DynFO. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolore quam quia aliquid laborum doloremque debitis a voluptatem suscipit esse, corporis, voluptate corrupti temporibus at dolor explicabo deserunt ipsum commodi?</span>
-                                <a href="#" class="read-more">Read more</a>
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <!-- Talk Card 1 -->
-                    <div class="card my-3 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Can a Goldfish Find its Way Back Home? <a href="https://www.youtube.com/watch?v=your-video-id"> <i class="fab fa-youtube"></i></a> <a href="https://arxiv.org/pdf/2301.00001.pdf" class="link-primary"><i class="fa-solid fa-file-powerpoint"></i></a> </h5>
-                            <p class="card-text-venue">@ Dartmouth, USA; IMSc, Chennai; IIT Madras, India.</p>
-                            
-                            <!-- Short description -->
-                            <p class="card-text-summary">
-                                A goldfish is said to have a short memory. Lets say logarithmic in input size!. Now, our Nemo, needs to traverse through dense waters, only seeing one edge at a time, and get back to her home. In otherwords, s-t path in log space. <span class="more-text"> In this talk, I explain our new techniques of maintaining the planarity of a graph in DynFO. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolore quam quia aliquid laborum doloremque debitis a voluptatem suscipit esse, corporis, voluptate corrupti temporibus at dolor explicabo deserunt ipsum commodi?</span>
-                                <a href="#" class="read-more">Read more</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Talk Card 1 -->
-                    <div class="card my-3 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Solving a Broken Rubik's Cube <a href="https://www.youtube.com/watch?v=your-video-id"> <i class="fab fa-youtube"></i></a> <a href="https://arxiv.org/pdf/2301.00001.pdf" class="link-primary"><i class="fa-solid fa-file-powerpoint"></i></a> </h5>
-                            <p class="card-text-venue">@ Dartmouth, USA; IMSc, Chennai; IIT Madras, India.</p>
-                            
-                            <!-- Short description -->
-                            <p class="card-text-summary">
-                                You found a Rubik's cube lying in the corner of boys commen room. Its broken. Every once in a while, one of the arm works. But then it gets stuck. We all know that Rubik's cube is a group. Its generating set being the arm movements. 
-                                <span class="more-text"> In this talk, I explain our new techniques of testing wether an item can be generated or not, in changing generating set. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolore quam quia aliquid laborum doloremque debitis a voluptatem suscipit esse, corporis, voluptate corrupti temporibus at dolor explicabo deserunt ipsum commodi?</span>
-                                <a href="#" class="read-more">Read more</a>
-                            </p>
-                        </div>
-                    </div> 
-
-                    <!-- Talk Card 1 -->
-                    <div class="card my-3 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Kirchhoff, Schrijver and, Wagner went to a Bar. <a href="https://www.youtube.com/watch?v=your-video-id"> <i class="fab fa-youtube"></i></a> <a href="https://arxiv.org/pdf/2301.00001.pdf" class="link-primary"><i class="fa-solid fa-file-powerpoint"></i></a> </h5>
-                            <p class="card-text-venue">@ Dartmouth, USA; IMSc, Chennai; IIT Madras, India.</p>
-                            
-                            <!-- Short description -->
-                            <p class="card-text-summary">
-                                Can you imagine what they would have talked about? Well, you don't need to. I was there, I'll tell you. They were discussing about our new techniques to use Kirchhoff's thm on two rectangular matrices. <span class="more-text"> In this talk, I explain our new techniques of maintaining the planarity of a graph in DynFO. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolore quam quia aliquid laborum doloremque debitis a voluptatem suscipit esse, corporis, voluptate corrupti temporibus at dolor explicabo deserunt ipsum commodi?</span>
-                                <a href="#" class="read-more">Read more</a>
+                            <!-- Replace the title and link with your preprint details -->
+                            <h5 class="card-title">Elvish Linguistics and the Evolution of Quenya 
+                                <a href="#" class="link-primary"><i class="fa-solid fa-file-pdf"></i></a>
+                            </h5>
+                            <p class="card-text-coauthors">with 
+                                <a href="#" target="_blank" rel="noopener" class="link-secondary">Elrond</a> and 
+                                <a href="#" target="_blank" rel="noopener" class="link-secondary">Galadriel</a>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
     </section>
-    
-    
+
+    <!-- Talks & Teaching Assistance Section -->
+    <section id="talks">
+        <div class="container">
+            <h1>Talks & Teaching Assistance</h1>
+            
+            <br>
+            <h2>Talks Given</h2>
+            <!-- Replace the list items with your own talks -->
+            <ul>
+                <li>Understanding Complexity Theory - Presented at the <em>10th Annual Conference on Theoretical Computer Science</em>, 2023</li>
+                <li>Advancements in Sublinear Algorithms - Invited talk at the <em>Workshop on Algorithms</em>, 2022</li>
+                <li>Polynomial Methods in Computer Science - Guest lecture at the <em>Chennai Mathematical Institute</em>, 2021</li>
+            </ul>
+            <br>
+            <h2>Teaching Assistance</h2>
+            <!-- Replace the list items with your own teaching assistance experience -->
+            <ul>
+                <li>Introduction to Algorithms - Chennai Mathematical Institute, Fall 2022</li>
+                <li>Discrete Mathematics - Chennai Mathematical Institute, Spring 2022</li>
+                <li>Theory of Computation - Chennai Mathematical Institute, Fall 2021</li>
+            </ul>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <div class="container mb-5">
             <h2>Contact</h2>
-            <p><strong>Email:</strong> asifkhan@cmi.ac.in</p>
-            <p><strong>Address:</strong> FL3, Main Building, Chennai Mathematial Institute. H1, SIPCOT IT Park, Siruseri, Chennai - 603103</p>
+            <!-- Replace the contact details with your own -->
+            <p><strong><i class="fas fa-envelope" style="color: #d44638;"></i> Email:</strong> <a href="mailto:frodo@cmi.ac.in">frodo@cmi.ac.in</a></p>
+            <p><strong><i class="fa-brands fa-signal-messenger" style="color: #3b45fd;"></i> Signal:</strong> @frodo.01</p>
+            <p><strong><i class="fa-brands fa-telegram" style="color: #0088cc;"></i> Telegram:</strong> @frodo_baggins</p>
+            <address>
+                <strong><i class="fas fa-map-marker-alt" style="color: #5c38ae;"></i> Address:</strong>
+                <p style="padding-left: 25px;">
+                    FL-03, Main building, Chennai Mathematical Institute,<br>
+                    H1 SIPCOT IT Park, Kelambakkam,<br>
+                    Tamilnadu, India. 603103
+                </p>
+            </address>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-top">
+    <!-- Please do not remove the credits below. I have worked on this for hours. -->
+    <footer class="border-top py-2">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7 text-center">
-                    <p>&copy; 2024 Asif Khan. All rights reserved.</p>
-                    <p><a href="#top" class="scroll-to-top">Back to Top</a></p>
+                <div class="col-md-10 col-lg-8 col-xl-7 text-center"></div>
+                    <p style="font-size: 1rem;">&copy;  <a href="https://github.com/severus-tux/template-cmi" target="_blank" rel="noopener">Template</a> by <a href="https://www.vishwaprakash.com" target="_blank" rel="noopener">Vishwa</a></p>
                 </div>
             </div>
         </div>
     </footer>
-    
-    
 
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Include JavaScript file -->
-    <script src="assets/js/scroll.js"></script>
-    <script src="assets/js/readmore.js"></script>
+    <!-- <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/readmore.js"></script> -->
     <!-- Bootstrap 5 JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-
-    </div> 
-    <!-- div content -->
+    <script>
+        $(".navbar-collapse a").click(function () {
+          $(".navbar-collapse").collapse("hide");
+        });
+    </script>
 </body>
 </html>
