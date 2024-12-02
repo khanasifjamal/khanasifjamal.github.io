@@ -1,17 +1,17 @@
 /* Root Variables */
 :root {
-    --background-color: #F2F0EA; /* Cream */
-    --navbar-color: #A8D5E3; /* Teal */
-    --link-color: #C05746; /* Rust Red */
-    --button-primary-color: #C05746; /* Rust Red */
-    --button-secondary-color: #225E68; /* Deep Teal */
-    --hover-link-color: #E76D54; /* Orange Hue */
-    --hover-button-primary: #E76D54; /* Darker Coral */
-    --card-background-color: #FFFFFF; /* Light gray background color */
-    --card-border-color: #ccc; /* Thin border */
-    --text-color: #000; /* Black */
-    --footer-background-color: rgba(0, 0, 0, 0.7); /* Footer background */
-    --footer-link-hover-color: #E76D54; /* Footer link hover color */
+    --background-color: #D1E8E2; /* Soft Mint */
+    --navbar-color: #116466; /* Teal Green */
+    --link-color: #2C3531; /* Dark Grayish Green */
+    --button-primary-color: #6E4B3A; /* Dark Grayish Green */
+    --button-secondary-color: #116466; /* Teal Green */
+    --hover-link-color: #6E4B3A; /* Pale Peach */
+    --hover-button-primary: #FFCB9A; /* Pale Peach */
+    --card-background-color: #D9B08C; /* Light Beige */
+    --card-border-color: #2C3531; /* Dark Grayish Green */
+    --text-color: #2C3531; /* Dark Grayish Green */
+    --footer-background-color: rgba(44, 53, 49, 0.7); /* Dark Grayish Green */
+    --footer-link-hover-color: #FFCB9A; /* Pale Peach */
 }
 
 /* Global Styles */
@@ -32,6 +32,13 @@ body {
     -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
 }
 
+/* Title Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Garamond", serif; /* Set Garamond as the font for titles */
+    font-weight: 700; /* Bold weight */
+    color: var(--text-color); /* Use the text color variable */
+}
+
 /* Link Styles */
 a {
     color: var(--link-color);
@@ -43,7 +50,7 @@ a:hover {
 }
 
 /* Button Styles */
-.btn-primary {
+/* .btn-primary {
     background-color: var(--button-primary-color) !important;
     border-color: var(--button-primary-color) !important;
 }
@@ -51,6 +58,16 @@ a:hover {
 .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: var(--hover-button-primary) !important;
     border-color: var(--hover-button-primary) !important;
+} */
+
+.btn-primary {
+    background-color: var(--button-primary-color) !important;
+    border-color: var(--button-primary-color) !important;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    /* background-color: var(--hover-button-primary) !important; */
+    /* border-color: var(--hover-button-primary) !important; */
 }
 
 /* Responsive Font Size */
@@ -98,6 +115,10 @@ section {
 #contact {
     scroll-margin-top: 70px;
     padding: 20px 0; /* Space inside sections */
+}
+
+#talks ul .talk_venue {
+    font-size: 1.2rem !important; /* Slightly smaller font size */
 }
 
 /* Event Styles */
@@ -179,7 +200,8 @@ section {
 
 .navbar-brand {
     font-size: 2rem; /* Slightly larger font size for the brand */
-    font-family: 'PT Serif', serif;
+    font-family: 'Garamond', serif;
+    color: white; /* Font color set to white */
 }
 
 .navbar-nav .nav-item {
@@ -188,6 +210,8 @@ section {
 
 .navbar-nav .nav-link {
     font-size: 1.3rem; /* Slightly larger font size for nav links */
+    font-family: 'Garamond', serif; /* Different font for nav links */
+    color: white; /* Font color set to white */
 }
 
 /* Navbar Collapse Styles */
@@ -215,7 +239,7 @@ section {
     margin: 0 auto;
     width: 70%;
     height: 70%;
-    border-radius: 20%;
+    border-radius: 50%;
     object-fit: cover;
     margin-bottom: 40px; /* Space between image and icons */
     margin-top: 50px; /* Ensures some distance from the top on larger screens */
