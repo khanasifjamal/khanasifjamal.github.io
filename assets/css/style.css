@@ -1,17 +1,29 @@
-/* Root Variables */
 :root {
-    --background-color: #D1E8E2; /* Soft Mint */
-    --navbar-color: #116466; /* Teal Green */
-    --link-color: #2C3531; /* Dark Grayish Green */
-    --button-primary-color: #6E4B3A; /* Dark Grayish Green */
-    --button-secondary-color: #116466; /* Teal Green */
-    --hover-link-color: #6E4B3A; /* Pale Peach */
-    --hover-button-primary: #FFCB9A; /* Pale Peach */
-    --card-background-color: #D9B08C; /* Light Beige */
-    --card-border-color: #2C3531; /* Dark Grayish Green */
-    --text-color: #2C3531; /* Dark Grayish Green */
-    --footer-background-color: rgba(44, 53, 49, 0.7); /* Dark Grayish Green */
-    --footer-link-hover-color: #FFCB9A; /* Pale Peach */
+    /* Color Variables */
+    --primary-color: #007bff;
+    --secondary-color: #f8f9fa;
+    --background-color: #e7e9f7;
+    --overlay-light: rgba(255, 255, 255, 0.2);
+    --overlay-dark: rgba(0, 0, 0, 0.1);
+    --text-color: #000;
+    --text-color-light: #fff;
+    --card-bg-color-paper: rgb(255, 255, 255);
+    --card-bg-color-talks: rgba(243, 230, 230);
+    --card-bg-color-preprints: rgb(250, 242, 252);
+    --link-color: #007bff;
+    --link-hover-color: #ffcc00;
+    --icon-color: #333;
+    --icon-hover-color: #007bff;
+    --navbar-color: #116466;
+    --footer-color: #2C3531;
+
+    /* Blur Variables */
+    --blur-light: blur(10px);
+    --blur-medium: blur(20px);
+}
+
+a {
+    text-decoration: none !important; /* Remove underline from links */
 }
 
 /* Global Styles */
@@ -22,9 +34,7 @@ html {
 
 body {
     background-color: var(--background-color);
-    font-family: "PT Serif", serif; /* Set PT Serif as the font for body text */
-    font-weight: 400; /* Regular weight */
-    font-style: normal;
+    font-family: 'Garamond', serif; /* Set Garamond as the font for body text */
     font-size: 1.5rem;
     margin: 0;
     padding: 0;
@@ -32,57 +42,44 @@ body {
     -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
 }
 
-/* Title Styles */
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Garamond", serif; /* Set Garamond as the font for titles */
-    font-weight: 700; /* Bold weight */
-    color: var(--text-color); /* Use the text color variable */
-}
-
-/* Link Styles */
-a {
-    color: var(--link-color);
-}
-
-a:hover {
-    color: var(--hover-link-color);
-    /* transition: color 0.5s ease; */
-}
-
-/* Button Styles */
-/* .btn-primary {
-    background-color: var(--button-primary-color) !important;
-    border-color: var(--button-primary-color) !important;
-}
-
-.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: var(--hover-button-primary) !important;
-    border-color: var(--hover-button-primary) !important;
-} */
-
-.btn-primary {
-    background-color: var(--button-primary-color) !important;
-    border-color: var(--button-primary-color) !important;
-}
-
-.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    /* background-color: var(--hover-button-primary) !important; */
-    /* border-color: var(--hover-button-primary) !important; */
-}
-
-/* Responsive Font Size */
+/* Adjust font size for smaller devices */
 @media (max-width: 767.98px) {
     body {
         font-size: 1.2rem; /* Smaller font size for phones */
     }
 }
 
-/* Section Padding */
+/* Background Layer */
+.bg {
+    /* background: url('../img/background.jpeg') no-repeat center center; */
+    background-size: cover; /* Ensure the background image covers the entire area */
+    position: fixed; /* Fixes the background in place */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    z-index: -1; /* Pushes the background behind everything else */
+}
+
+/* Content Layer */
+.content {
+    position: relative; /* Ensure the content stays above the background */
+    padding: 2rem; /* Add some padding to keep content away from the edges */
+    z-index: 1; /* Ensure it's above the background */
+    padding: 0;
+    margin: 0;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Garamond', serif; /* Apply Garamond to headings */
+}
+
 section {
     padding: 80px 0;
 }
 
-/* Container Width Adjustments */
+/* Container Adjustments for Larger Screens */
 @media (min-width: 1200px) { /* XL screens */
     .container {
         max-width: 1200px; /* Adjust as needed */
@@ -96,7 +93,8 @@ section {
 }
 
 /* Home Section Specific Styles */
-#aboutme {
+#home {
+    color: var(--text-color-light);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -105,23 +103,20 @@ section {
     padding-top: 60px;
 }
 
-/* Other Sections */
-#publications, #talks {
-    scroll-margin-top: 70px;
-    padding: 20px 0; /* Space inside sections */
+/* About, Research, and Contact Sections */
+#about, #research, #contact {
+    padding: 40px 0; /* Space inside sections */
+    /* backdrop-filter: var(--blur-medium); */
+    /* -webkit-backdrop-filter: var(--blur-medium); For Safari compatibility */
+    /* background-color: var(--overlay-light); Optional overlay for readability */
+}
+
+#about, #research, #resources{
     min-height: 100vh;
 }
 
-#contact {
-    scroll-margin-top: 70px;
-    padding: 20px 0; /* Space inside sections */
-}
 
-#talks ul .talk_venue {
-    font-size: 1.2rem !important; /* Slightly smaller font size */
-}
-
-/* Event Styles */
+/* Events Section */
 .events {
     padding-left: 10pt;
 }
@@ -130,15 +125,57 @@ section {
     padding-top: 10pt;
     padding-bottom: 20pt;
 }
-
 /* Card Styles */
+
+.bookmark {
+    position: absolute; /* Place it relative to the card */
+    top: -7px; /* Slightly outside the card */
+    left: -7px; /* Slightly outside the card */
+    width: 35px; /* Width of the bookmark */
+    height: 45px; /* Height of the bookmark */
+    /* background-color: #007bff; Blue background for the bookmark */
+    color: white; /* White text color */
+    font-weight: normal; /* Bold text */
+    font-size: 1rem; /* Adjust text size */
+    display: flex; /* Center the text */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    border-radius: 8px 8px 0 0; /* Rounded corners at the top */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 85%, 0% 100%); /* Triangle cut-out at the bottom */
+    z-index: 10; /* Ensure it stays above the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a realistic effect */
+}
+
+.conference{
+    background-color: #5A6F7C;
+}
+.preprint{
+    background-color: #A89F91;
+}
+
+.journal{
+    background-color: #C48D8F;
+}
+
 .card {
-    background-color: var(--card-background-color);
-    border: 1px solid var(--card-border-color);
+    background-color: var(--card-bg-color-paper); /* Less transparent for better visibility */
+    border: none;
     border-radius: 0.5rem;
+    /* backdrop-filter: var(--blur-light);
+    -webkit-backdrop-filter: var(--blur-light); For Safari compatibility */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding-left: 20px;
     position: relative; /* Ensure positioning context */
+    border: 1px solid #b4b4b4;
+    /* z-index: 1; Adjust as necessary */
+}
+
+.talks .card {
+    background-color: var(--card-bg-color-talks);
+}
+
+.working .card {
+    background-color: var(--card-bg-color-preprints);
 }
 
 .card-body {
@@ -148,17 +185,13 @@ section {
 .card-title {
     font-family: "Raleway", serif;
     font-size: 1.4rem;
+    /* font-weight: bold; */
     line-height: 1.5rem;
     font-weight: 500;
 }
 
 .card-title a {
     padding-left: 10px;
-    color: var(--link-color) !important;
-}
-
-.card-title a:hover {
-    color: var(--hover-link-color) !important;
 }
 
 .card-text-coauthors, .card-text-summary, .card-text-venue {
@@ -177,7 +210,7 @@ section {
     padding-left: 0px;
 }
 
-/* Responsive Card Text */
+/* Adjustments for smaller devices */
 @media (max-width: 767.98px) {
     .card-title {
         font-size: 1.3rem; /* Smaller font size for phones */
@@ -188,39 +221,198 @@ section {
     }
 }
 
-/* Navbar Styles */
-.navbar-custom {
-    background-color: var(--navbar-color);
+/* More text - initially collapsed */
+.more-text {
+    max-height: 0; /* Initially hide the extra text */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.5s ease, margin-top 0.5s ease, margin-bottom 0.5s ease; /* Smooth transition */
 }
 
+.more-text.open {
+    max-height: 200px; /* Set a max height when expanded (adjust as needed) */
+    margin-bottom: 20px; /* Add space when open */
+}
+
+/* Read more link */
+.read-more {
+    align-self: flex-end; /* Aligns the link to the right */
+    text-decoration: underline; /* Optional styling */
+    cursor: pointer; /* Show pointer on hover */
+    transition: color 0.5s ease; /* Smooth color transition */
+}
+
+/* Sticky Title */
+.sticky-title {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 90px; /* Sticks the title to the top of the viewport */
+    padding-top: 0px; /* Optional padding */
+    font-weight: bold;
+    z-index: 50; /* Ensure it's above the rest of the content */
+}
+
+.sticky-title h1 {
+    font-size.card {
+        background-color: var(--card-bg-color-paper); /* Less transparent for better visibility */
+        border: none;
+        border-radius: 0.5rem;
+        /* backdrop-filter: var(--blur-light);
+        -webkit-backdrop-filter: var(--blur-light); For Safari compatibility */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding-left: 20px;
+        position: relative; /* Ensure positioning context */
+        border: 1px solid #b4b4b4;
+        /* z-index: 1; Adjust as necessary */
+    }
+    
+    .talks .card {
+        background-color: var(--card-bg-color-talks);
+    }
+    
+    .working .card {
+        background-color: var(--card-bg-color-preprints);
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-family: "Raleway", serif;
+        font-size: 1.4rem;
+        /* font-weight: bold; */
+        line-height: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .card-title a {
+        padding-left: 10px;
+    }
+    
+    .card-text-coauthors, .card-text-summary, .card-text-venue {
+        margin-bottom: 0rem;
+        font-size: 1.3rem;
+    }
+    
+    .card-text-summary {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        justify-content: space-between; /* Space between text and link */
+    }
+    
+    .card-text-venue {
+        font-style: italic;
+        padding-left: 0px;
+    }: 2.8rem; /* Make the title bigger */
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 1200px) {
+    .sticky-title h1 {
+        font-size: 3.2rem; /* Make the title bigger */
+    }
+}
+
+/* Navbar styling */
 .navbar {
-    box-shadow: 0 2px 4px rgb(175, 175, 175); /* Slight shadow to the bottom */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow to the bottom */
     z-index: 1030; /* Ensure this is above other content */
 }
 
+
+
+/* Brand styling */
 .navbar-brand {
     font-size: 2rem; /* Slightly larger font size for the brand */
-    font-family: 'Garamond', serif;
-    color: white; /* Font color set to white */
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    /* text-decoration: underline; */
+    /* border-bottom: #000; */
 }
 
+/* Navbar items spacing */
 .navbar-nav .nav-item {
     margin-left: 1rem; /* Adds space between nav items */
 }
 
+/* Navbar links font size */
 .navbar-nav .nav-link {
     font-size: 1.3rem; /* Slightly larger font size for nav links */
-    font-family: 'Garamond', serif; /* Different font for nav links */
-    color: white; /* Font color set to white */
+}
+
+
+
+/* Divider Styling for Larger Screens (Default) */
+.nav-item.divider {
+    display: flex; /* Ensures it's inline by default */
+    align-items: center;
+    padding: 0 1px;
+    color: #ddd; /* Neutral color for the divider */
+    pointer-events: none; /* Prevent interaction */
+}
+
+.nav-item.divider::before {
+    content: '|'; /* Add vertical line for larger screens */
+}
+
+@media (max-width: 991px) {
+    .nav-item.divider::before {
+        content: none; /* Disable for smaller screens */
+    }
+}
+
+/* Divider Styling for Collapsed Navbar */
+@media (max-width: 991px) { /* Adjust breakpoint as needed */
+    .navbar-collapse .nav-item.divider {
+        display: block; /* Switch to block display */
+        width: 100%; /* Make it span full width */
+        height: 1px; /* Thin horizontal line */
+        background-color: #ddd; /* Neutral color for the line */
+        margin: 10px 0; /* Add spacing above and below */
+    }
+
+    /* Hide the vertical line */
+    .navbar-collapse .nav-item.divider::before {
+        content: none; /* Prevent the vertical | from appearing */
+    }
+}
+
+
+
+
+/* External Link Styling */
+.nav-link.external-link {
+    /* color: #007bff; Highlight color for external links */
+    font-style: italic;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link.external-link i {
+    font-size: 0.85rem; /* Smaller icon size */
+    margin-left: 5px; /* Space between text and icon */
+}
+
+/* Optional Hover Effect */
+.nav-link.external-link:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker highlight on hover */
+}
+
+
+/* Active nav item styling */
+.navbar-nav .nav-link.active {
+    color: var(--primary-color); /* Color for the active link */
+    /*font-weight: bold;  Optional: Makes the active link bold */
 }
 
 /* Navbar Collapse Styles */
 .navbar-collapse {
     position: fixed; /* Makes the dropdown overlay the content */
-    top: 74px; /* Adjust based on your navbar height */
+    top: 73px; /* Adjust based on your navbar height */
     left: 0;
     width: 100%;
-    background-color: var(--navbar-color);
+    background-color: var(--secondary-color); /* Semi-transparent background */
     z-index: 1050; /* Higher than the content */
     overflow-y: auto; /* Allows scrolling if content overflows */
 }
@@ -233,7 +425,13 @@ section {
     }
 }
 
-/* Profile Picture Styles */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow to the bottom */
+    }
+}
+
+/* Profile Picture */
 .profile-pic {
     display: block;
     margin: 0 auto;
@@ -243,10 +441,8 @@ section {
     object-fit: cover;
     margin-bottom: 40px; /* Space between image and icons */
     margin-top: 50px; /* Ensures some distance from the top on larger screens */
-    border: 2px solid var(--card-border-color); /* Thin border around the picture */
 }
 
-/* Responsive Profile Picture */
 @media (max-width: 767.98px) { /* Small devices */
     .profile-pic {
         width: 60%;
@@ -263,24 +459,88 @@ section {
     }
 }
 
-/* Paper Title Styles */
-.paper-title {
+/* Article Styles */
+.article-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100%;            /* Full height for vertical centering */
+}
+
+.article-style {
+    overflow: hidden; /* Prevents overflow issues */
+    padding: 15px;    /* Small padding on all sides */
+    font-family: 'Garamond', serif; /* Good font for readability */
+    line-height: 1.6; /* Improves readability */
+    color: var(--text-color); /* Text color set to black */
+    text-align: left;
+}
+
+/* Center the button */
+.article-style .btn-page-header {
+    display: block; /* Change to block to use margin auto */
+    width: fit-content; /* Fit the button’s width to its content */
+    margin: 20px auto 0; /* Center horizontally with auto margins */
+    text-align: center; /* Center the text inside the button */
+}
+
+
+/* Custom Alert Styling */
+.custom-alert {
+    font-size: 1.35rem;
+    font-weight: 500;
+    background-color: rgba(255, 243, 205, 0.5); /* light warning with slight transparency */
+    border-left: 4px solid #ffc107; /* standard Bootstrap warning color */
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    margin-right: 2rem;
+    color: #5d4037; /* dark brown text for good contrast */
+}
+
+.alert-icon {
+    color: #ff9800;
+    font-size: 1.5rem;
+}
+
+/* Responsive improvements */
+@media (max-width: 767.98px) {
+    .custom-alert {
+        font-size: 1.1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .alert-icon {
+        font-size: 1.3rem;
+        margin-right: 0.75rem;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    background-color: var(--footer-color);
+    /* backdrop-filter: var(--blur-medium);
+    -webkit-backdrop-filter: var(--blur-medium); For Safari compatibility */
+    color: var(--text-color-light);
+    text-align: center;
+    a, a:visited, a:active {
+        color: #fff !important;
+    }
+}
+
+/* Scroll to Top */
+.scroll-to-top {
+    color: var(--text-color-light);
+    text-decoration: underline;
     font-weight: bold;
 }
 
-/* Author Links */
-.authors a {
-    text-decoration: none;
-}
-
-/* Paper Links */
-.paper-links a {
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-.paper-links i {
-    margin-right: 5px;
+.scroll-to-top:hover {
+    color: var(--link-hover-color);
 }
 
 /* Network Icons */
@@ -297,32 +557,14 @@ section {
 }
 
 .network-icons a {
-    color: var(--text-color);
+    color: var(--icon-color);
     text-decoration: none;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .network-icons a:hover {
-    color: var(--hover-link-color);
-}
-
-/* Article Container */
-.article-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    height: 100%;            /* Full height for vertical centering */
-}
-
-/* Article Style */
-.article-style {
-    overflow: hidden; /* Prevents overflow issues */
-    padding: 15px;    /* Small padding on all sides */
-    font-family: 'Garamond', serif; /* Good font for readability */
-    line-height: 1.6; /* Improves readability */
-    color: var(--text-color); /* Text color set to black */
-    text-align: left;
+    color: var(--icon-hover-color);
 }
 
 /* Adjust network icon size for mobile */
@@ -336,36 +578,22 @@ section {
     }
 }
 
-/* Center the button */
-.article-style .btn-page-header {
-    display: block; /* Change to block to use margin auto */
-    width: fit-content; /* Fit the button’s width to its content */
-    margin: 20px auto 0; /* Center horizontally with auto margins */
-    text-align: center; /* Center the text inside the button */
+/* Paper Styles */
+.paper-title {
+    font-weight: bold;
 }
 
-/* Footer Styles */
-footer {
-    padding-top: 1rem;
-    padding-bottom: 0.2rem;
-    background-color: var(--footer-background-color);
-    text-align: center;
-    color: white;
+.authors a {
+    text-decoration: none;
+    color: var(--link-color); /* Bootstrap primary color */
 }
 
-footer a {
-    color: white;
+.paper-links a {
+    text-decoration: none;
+    color: var(--link-color); /* Bootstrap primary color */
+    margin-right: 10px;
 }
 
-footer a:hover {
-    color: var(--footer-link-hover-color); /* Hover link color */
-}
-
-/* Scroll to Top Link */
-.scroll-to-top {
-    text-decoration: underline;
-}
-
-.scroll-to-top:hover {
-    color: var(--footer-link-hover-color);
+.paper-links i {
+    margin-right: 5px;
 }

@@ -1,0 +1,95 @@
+/* Basic Table Styling */
+
+.table_wrapper {
+    overflow: auto; /* Both horizontal and vertical scroll for tables that overflow */
+    max-height: 80vh; /* Ensure the table height is within the visible screen */
+    margin-top: 20px; /* Space between the table and other content */
+}
+
+.table {
+    margin-bottom: 0px;
+    width: 100%;
+    /* height: 100%; */
+    /* margin-top: 20px; */
+    border: 1px solid #a9a9a9; /* Slightly lighter border for the table */
+    font-size: 1.5rem;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+}
+
+.table th {
+    position: sticky;
+    position: -webkit-sticky; /* Sticky header for better navigation */
+    top: 0px;
+    z-index: 50; /* Ensure the header stays above other content */
+}
+
+.table th, .table td {
+    padding: 12px 15px; /* Slightly more padding for better spacing */
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #e0e0e0; /* Light border for table cells */
+    color: #333; /* Dark text for readability */
+}
+
+/* Prevent wrapping for the table, table rows, and cells */
+.table, .table th, .table td {
+    white-space: nowrap;
+}
+
+/* Table Header Styling */
+.table th {
+    background-color: #c6c6c6; /* Slightly lighter gray for headers */
+    font-weight: 600; /* Slightly lighter font weight */
+    color: #232323; /* Darker text for better readability */
+    /* text-transform: uppercase; Capitalize header text */
+    letter-spacing: 0.5px; /* Subtle spacing for a more elegant look */
+}
+
+/* Table Row Styling */
+.table tr {
+    background-color: rgba(250, 250, 250, 0.95); /* Light gray with slight transparency */
+    transition: background-color 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.table tr:hover {
+    background-color: rgba(245, 245, 245, 0.95); /* Slightly darker background on hover */
+}
+
+/* Links in Table */
+.table td a {
+    color: #027bff; /* Blue color for links */
+    text-decoration: none;
+    font-weight: 500; /* Subtle boldness to links */
+}
+
+.table td a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+/* Countdown Green (Upcoming) */
+.countdown.green {
+    color: #28a745; /* Brighter green for upcoming dates */
+    font: size 0.8rem;
+    font-style: italic;
+}
+
+/* Countdown Red (Past) */
+.countdown.red {
+    color: #dc3545; /* Brighter red for past dates */
+    font: size 0.8rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    /* Reduce font size for smaller screens (phones and tablets) */
+    .table th, .table td {
+        font-size: 1.2rem; /* Smaller font size */
+        padding: 8px 10px; /* Less padding for smaller screens */
+    }
+
+    .countdown.green .countdown.red {
+        font: size 0.6rem;
+        font-style: italic;
+    }
+}
